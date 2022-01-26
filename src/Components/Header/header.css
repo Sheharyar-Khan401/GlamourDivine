@@ -1,0 +1,59 @@
+.header{
+    color:white;
+    box-shadow: 5px 2px 18px #888888;
+    width: 100%;
+    height: auto;
+    font-family: SFProText;
+    position: fixed;
+    z-index: 100;
+}
+a{
+    color:white;
+}
+.navigation a{
+    color:white;
+}
+.serch-div{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.serch-div .search{
+    padding-top: 15px;
+}
+.logo{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 24px;
+}
+.navigation div{
+    cursor: pointer;
+}
+.textcenter{
+    text-align: center;
+}
+.home-div:hover{
+    border-bottom: 3px solid #37A3FF;
+}
+.pet-div:hover{
+    border-bottom: 3px solid #37A3FF;
+}
+.grocery-div:hover{
+    border-bottom: 3px solid #37A3FF;
+}
+.kitchen-div:hover{
+    border-bottom: 3px solid #37A3FF;
+}
+.garden-div:hover{
+    border-bottom: 3px solid #37A3FF;
+}
+.sports-div:hover{
+    border-bottom: 3px solid #37A3FF;
+}
+.beauty-div:hover{
+    border-bottom: 3px solid #37A3FF;
+}
+.brand-name{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 30px;
+    line-height: 1.7;
+}
