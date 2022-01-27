@@ -7,6 +7,26 @@
     position: fixed;
     z-index: 100;
 }
+.mobile-header{
+    padding: 5px;
+    color:white;
+    background-color: #001529;
+    box-shadow: 5px 2px 18px #888888;
+    width: 100%;
+    height: auto;
+    font-family: SFProText;
+    position: relative;
+    text-align: center;
+}
+.mobile-menu-div{
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    font-family: SFProText;
+}
+.mobile-heading{
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 21px;
+}
 a{
     color:white;
 }
@@ -34,6 +54,9 @@ a{
 .home-div:hover{
     border-bottom: 3px solid #37A3FF;
 }
+.mobile-home-div a{
+    color:black
+}
 .pet-div:hover{
     border-bottom: 3px solid #37A3FF;
 }
@@ -56,4 +79,16 @@ a{
     font-family: 'Mochiy Pop P One', sans-serif;
     font-size: 30px;
     line-height: 1.7;
+}
+.drawer a{
+    color:black
+}
+.mobile-menu-div-bottom{
+    width: 100%;
+    /* margin-top: 20%; */
+    /* position: fixed; */
+    flex-direction: row;
+    text-align: right;
+    border-right: 1px solid lightgray;
+    padding: 5px;
 }

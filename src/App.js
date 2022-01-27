@@ -5,11 +5,13 @@ import "./assets/css/common.css";
 import Header from './Components/Header/Header';
 import Home from './pages/homepage/Home';
 import { AppRouter } from './routes/routes';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (<>
       <Header/>
       <AppRouter/>
+      <Footer/>
       </>
   );
 }

@@ -1,5 +1,5 @@
 import ReactDom from "react-dom";
-import React from "react";
+import React,{useState,useEffect} from "react";
 import pic1 from "../../../assets/images/categoryPics/grocey/pic1.jpg"
 import pic2 from "../../../assets/images/categoryPics/grocey/pic2.jpg"
 import pic3 from "../../../assets/images/categoryPics/grocey/pic3.jpg"
@@ -16,14 +16,37 @@ import { Button, Card, Col, Typography, Row } from 'antd';
 
 const Grocery = () => {
  const { Meta } = Card;
+ const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    const [marginTop, setMarginTop] = useState('185px');
+
+    useEffect(() => {
+        if (windowDimensions.width < 650) {
+            setMarginTop('22px')
+        }
+    }, [windowDimensions])
+
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        return {
+            width,
+            height
+        };
+    }
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
  return (
   <>
-   <Col style={{ position: 'relative', margin: 'auto', width: '80%' }}>
-    <Row style={{ marginTop: '185px' }}>
-     <Col lg={8}>
+   <Col style={{ position: 'relative', margin: 'auto', width: '100%' }}>
+    <Row gutter={16} style={{ marginTop: marginTop }}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic1} />}
       >
        <Meta description={<h5>
@@ -31,82 +54,82 @@ const Grocery = () => {
        </h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic2} />}
       >
        <Meta description={<h5>Comfort Dermatologically tested Pure suitable for the whole family's clothes Fabric Conditioner gentle next to sensitive skin 166 Wash 5 l</h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic3} />}
       >
        <Meta description={<h5>Dr Beckmann Carpet Stain Remover with Cleaning applicator/brush-650ml, White, 10 x 30 x 35 cm</h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic4} />}
       >
        <Meta description={<h5>Plenty Kitchen Towel, 6 White Rolls, 600 Sheets, 2-Ply Tissue</h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic5} />}
       >
        <Meta description={<h5>Domestos Original Thick Bleach 750ml, Packaging May Vary</h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic6} />}
       >
        <Meta description={<h5>Grenade Carb Killa High Protein and Low Carb Bar, 12 x 60 g - A Selection Box</h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic7} />}
       >
        <Meta description={<h5>Golden Swan White Vinegar for Cleaning, Pickling, Marinating & Cooking - Distilled White Vinegar- 5 Litre Bottle - Produced in The UK (1 Pack)</h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic8} />}
       >
        <Meta description={<h5>Round Vietnamese Rice paper 22cm 340g Summer Roll Goi Cuon Banh Trang Fresh Spring Roll</h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic9} />}
       >
        <Meta description={<h5>Kewpie Qp Mayonnaise 500g, F0656</h5>} />
       </Card>,
      </Col>
-     <Col lg={8}>
+     <Col style={{ margin: 'auto' }} sm={11} xs={11} lg={8}>
       <Card
        hoverable
-       style={{ width: 240 }}
+       style={{ width: windowDimensions.width > 659 ? 240 : "100%", margin: 'auto' }}
        cover={<img alt="example" src={pic10} />}
       >
        <Meta description={<h5>Regina Blitz Household Towel, 8 Rolls, 560 Super-Sized Sheets, Triple Layered Strength</h5>} />

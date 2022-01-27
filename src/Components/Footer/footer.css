@@ -1,0 +1,11 @@
+footer {
+    text-align: center;
+    margin-top: 5%;
+    padding: 5px;
+    background-color: #F7F7F7;
+    color: black;
+    padding-top: 20px;
+  }
+ .footer a{
+      color:black
+  }
